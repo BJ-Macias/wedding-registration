@@ -1,4 +1,4 @@
-import { Carousel, Col, Image, Row, Space } from 'antd'
+import { Carousel, Col, Image, Row } from 'antd'
 
 const ImageCarousel = () => {
   return (

@@ -69,14 +69,18 @@
 }
 
 .responsive-title {
-  font-size: 36px;
+  font-size: 38px;
 }
 
 .responsive-text {
-  font-size: 24px;
+  font-size: 22px;
 }
 
-.responsive-sub-title {
+.responsive-subtitle {
+  font-size: 26px;
+}
+
+.responsive-countdown-text {
   font-size: 30px;
 }
 
@@ -86,10 +90,14 @@
   }
 
   .responsive-text {
+    font-size: 22px;
+  }
+
+  .responsive-subtitle {
     font-size: 26px;
   }
 
-  .responsive-sub-title {
+  .responsive-countdown-text {
     font-size: 30px;
   }
 }
@@ -100,24 +108,31 @@
   }
 
   .responsive-text {
-    font-size: 32px;
+    font-size: 28px;
   }
 
-  .responsive-sub-title {
-    font-size: 38px;
+  .responsive-subtitle {
+    font-size: 32px;
+  }
+  .responsive-countdown-text {
+    font-size: 36px;
   }
 }
 
 @media (min-width: 1200px) {
   .responsive-title {
-    font-size: 68px;
+    font-size: 72px;
   }
 
   .responsive-text {
+    font-size: 30px;
+  }
+
+  .responsive-subtitle {
     font-size: 38px;
   }
 
-  .responsive-sub-title {
-    font-size: 42px;
+  .responsive-countdown-text {
+    font-size: 40px;
   }
 }

@@ -15,7 +15,7 @@ const RegisterForm = () => {
   ])
 
   const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
-    console.log('Success:', values)
+    console.log('Success:', value)
   }
 
   const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
@@ -28,9 +28,9 @@ const RegisterForm = () => {
 
   return (
     <>
-      <Row align={'middle'} justify={'center'} style={{ marginTop: 20 }}>
+      <Row align={'middle'} justify={'center'} style={{ marginTop: 25 }}>
         <Col span={22}>
-          <Typography className='tangerine-bold responsive-sub-title' style={{ textAlign: 'center' }}>Registro de Asistencia</Typography>
+          <Typography className='tangerine-bold responsive-subtitle' style={{ textAlign: 'center' }}>Registro de Asistencia</Typography>
           <Form
             name="assists"
             initialValues={{ remember: true }}
@@ -46,7 +46,7 @@ const RegisterForm = () => {
                 options={options}
                 onSelect={onSelect}
                 onChange={(e) => setValue(e)}
-                placeholder='Ingresa tu nombre completo' />
+                placeholder='Ingresa tu nombre' />
             </Form.Item>
 
             <Form.Item label={null}>

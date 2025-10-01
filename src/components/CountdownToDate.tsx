@@ -13,7 +13,7 @@ interface TimeLeft {
 }
 
 const CountdownToDate = () => {
-  const targetDate = new Date('2025-10-01T15:00:00')
+  const targetDate = new Date('2026-02-02T15:00:00')
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({})
   const [expired, setExpired] = useState(false)
 
@@ -65,20 +65,20 @@ const CountdownToDate = () => {
 
     return (
       <div>
-        {months !== undefined && <Text className='tangerine-regular responsive-text '>{months} mes{months !== 1 ? 'es' : ''} • </Text>}
-        {weeks !== undefined && weeks! > 0 && <Text className='tangerine-regular responsive-text'> {weeks} semana{weeks !== 1 ? 's' : ''} • </Text>}
-        {days !== undefined && days! > 0 && <Text className='tangerine-regular responsive-text'> {days} día{days !== 1 ? 's' : ''} • </Text>}
-        <Text className='tangerine-regular responsive-text'> {hours}h •</Text>
-        <Text className='tangerine-regular responsive-text'> {minutes}m •</Text>
-        <Text className='tangerine-regular responsive-text'> {seconds}s</Text>
+        {months !== undefined && <Text className='tangerine-bold responsive-countdown-text  '>{months} mes{months !== 1 ? 'es' : ''} • </Text>}
+        {weeks !== undefined && weeks! > 0 && <Text className='tangerine-bold responsive-countdown-text '> {weeks} semana{weeks !== 1 ? 's' : ''} • </Text>}
+        {days !== undefined && days! > 0 && <Text className='tangerine-bold responsive-countdown-text '> {days} día{days !== 1 ? 's' : ''} • </Text>}
+        <Text className='tangerine-bold responsive-countdown-text '> {hours}h •</Text>
+        <Text className='tangerine-bold responsive-countdown-text '> {minutes}m •</Text>
+        <Text className='tangerine-bold responsive-countdown-text '> {seconds}s</Text>
       </div>
     )
   }
 
   return (
-    <div style={{ textAlign: 'center', marginTop: 20 }}>
-      {!expired && <Text className='tangerine-bold responsive-sub-title' style={{ textAlign: 'center' }}>Período para el Magnoevento</Text>}
-      {expired ? <Text className='tangerine-bold responsive-sub-title' style={{ textAlign: 'center' }}>¡El evento ha comenzado!</Text> : renderTime()}
+    <div style={{ textAlign: 'center' }}>
+      {!expired && <Text className='tangerine-bold responsive-subtitle' style={{ textAlign: 'center' }}>Período para el Magnoevento</Text>}
+      {expired ? <Text className='tangerine-bold responsive-title' style={{ textAlign: 'center' }}>¡El evento ha comenzado!</Text> : renderTime()}
     </div>
   )
 }
