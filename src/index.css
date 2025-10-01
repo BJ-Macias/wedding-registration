@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tangerine-regular {
+  font-family: "Tangerine", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.tangerine-bold {
+  font-family: "Tangerine", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* glass-card.css */
+.glass-card {
+  /* Fondo semitransparente (ajusta según tema) */
+  background: rgba(245, 242, 242, 0.06);
+  /* filtro de fondo (el truco del glassmorphism) */
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+
+  /* borde sutil y redondeo */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+
+  /* sombra ligera para separación */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* transiciones suaves */
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  overflow: hidden;
+}
+
+/* pequeño efecto hover */
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18);
+}
+
+/* Ajustes específicos para el header del Card de AntD */
+.glass-card .ant-card-head {
+  background: transparent;
+  border-bottom: none;
+}
+
+/* Ajusta el body si necesitas espaciado extra */
+.glass-card .ant-card-body {
+  padding: 0px;
+}
+
+/* Fallback para navegadores que no soportan backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass-card {
+    /* usar degradado + menos transparencia como fallback */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+}
+
+.responsive-title {
+  font-size: 36px;
+}
+
+.responsive-text {
+  font-size: 24px;
+}
+
+.responsive-sub-title {
+  font-size: 30px;
+}
+
+@media (min-width: 576px) {
+  .responsive-title {
+    font-size: 38px;
+  }
+
+  .responsive-text {
+    font-size: 26px;
+  }
+
+  .responsive-sub-title {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-title {
+    font-size: 52px;
+  }
+
+  .responsive-text {
+    font-size: 32px;
+  }
+
+  .responsive-sub-title {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .responsive-title {
+    font-size: 68px;
+  }
+
+  .responsive-text {
+    font-size: 38px;
+  }
+
+  .responsive-sub-title {
+    font-size: 42px;
+  }
+}
