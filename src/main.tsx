@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
@@ -8,19 +7,19 @@ createRoot(document.getElementById('root')!).render(
   // <StrictMode>
   <ConfigProvider
     theme={{
-      algorithm: theme.darkAlgorithm,
-      // token: {
-      //   colorPrimary: '#E4B4EC',
-      //   colorBgContainer: '#EBD5FB',
-      //   colorText: '#F7E3FB',
-      // },
-      // components: {
-      //   Input: {
-      //     colorText: '#D59BE1',
-      //     colorTextPlaceholder: '#C682D4',
-      //     colorBorder: '#C682D4'
-      //   },
-      // }
+      // algorithm: theme.darkAlgorithm,
+      token: {
+        colorPrimary: '#E4B4EC',
+        colorBgContainer: '#F5D5F5',
+        colorText: '#A24BA2',
+      },
+      components: {
+        Input: {
+          colorText: '#D59BE1',
+          colorTextPlaceholder: '#C682D4',
+          colorBorder: '#C682D4'
+        },
+      }
     }}
   >
     <App />

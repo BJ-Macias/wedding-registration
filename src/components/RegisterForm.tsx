@@ -1,4 +1,5 @@
-import { AutoComplete, Button, Col, Form, Row, Typography, type AutoCompleteProps, type FormProps } from 'antd'
+import { SendOutlined, UserAddOutlined } from '@ant-design/icons';
+import { AutoComplete, Button, Card, Col, Form, Row, Space, Typography, type AutoCompleteProps, type FormProps } from 'antd';
 import type { FieldNamesType } from 'antd/es/cascader';
 import { useState } from 'react';
 
@@ -14,7 +15,7 @@ const RegisterForm = () => {
     { value: 'Jairo' }
   ])
 
-  const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
+  const onFinish: FormProps<FieldType>['onFinish'] = () => {
     console.log('Success:', value)
   }
 
@@ -22,15 +23,16 @@ const RegisterForm = () => {
     console.log('Failed:', errorInfo)
   }
 
-  const onSelect = (data: string) => {
-    console.log('onSelect', data)
-  }
-
   return (
     <>
       <Row align={'middle'} justify={'center'} style={{ marginTop: 25 }}>
         <Col span={22}>
-          <Typography className='tangerine-bold responsive-subtitle' style={{ textAlign: 'center' }}>Registro de Asistencia</Typography>
+          <Typography className='tangerine-bold responsive-subtitle' style={{ textAlign: 'center' }}>Confirma tu Asistencia</Typography>
+        </Col>
+        <Col span={22} style={{ textAlign: 'center', marginBottom: 10 }}>
+          <UserAddOutlined className='responsive-subtitle' />
+        </Col>
+        <Col span={22}>
           <Form
             name="assists"
             initialValues={{ remember: true }}
@@ -44,13 +46,12 @@ const RegisterForm = () => {
             >
               <AutoComplete
                 options={options}
-                onSelect={onSelect}
-                onChange={(e) => setValue(e)}
-                placeholder='Ingresa tu nombre' />
+                onSelect={(e) => setValue(e)}
+                placeholder='Ingresa tu nombre...' />
             </Form.Item>
 
             <Form.Item label={null}>
-              <Button block type="primary" htmlType="submit">
+              <Button icon={<SendOutlined />} block type="primary" htmlType="submit">
                 Confirmar Asistencia
               </Button>
             </Form.Item>
