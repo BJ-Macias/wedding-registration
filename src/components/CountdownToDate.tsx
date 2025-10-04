@@ -13,7 +13,7 @@ interface TimeLeft {
 }
 
 const CountdownToDate = () => {
-  const targetDate = new Date('2026-02-02T15:00:00')
+  const targetDate = new Date('2026-05-02T15:00:00')
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({})
   const [expired, setExpired] = useState(false)
 

@@ -7,10 +7,10 @@ createRoot(document.getElementById('root')!).render(
   // <StrictMode>
   <ConfigProvider
     theme={{
-      // algorithm: theme.darkAlgorithm,
+      algorithm: theme.darkAlgorithm,
       token: {
         colorPrimary: '#E4B4EC',
-        colorBgContainer: '#F5D5F5',
+        colorBgContainer: '#ece2fd',
         colorText: '#A24BA2',
       },
       components: {
