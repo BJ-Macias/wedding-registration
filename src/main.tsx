@@ -11,7 +11,6 @@ createRoot(document.getElementById('root')!).render(
       token: {
         colorPrimary: '#E4B4EC',
         colorBgContainer: '#ece2fd',
-        colorText: '#A24BA2',
       },
       components: {
         Input: {

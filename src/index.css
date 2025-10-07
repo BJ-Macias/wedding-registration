@@ -23,6 +23,25 @@
   font-style: normal;
 }
 
+.meow-script-regular {
+  font-family: "Meow Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.comic-relief-regular {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-relief-bold {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /* glass-card.css */
 .glass-card {
   /* Fondo semitransparente (ajusta según tema) */
@@ -73,12 +92,12 @@
   font-size: 48px;
 }
 
-.responsive-text {
-  font-size: 22px;
-}
-
 .responsive-subtitle {
   font-size: 26px;
+}
+
+.responsive-text {
+  font-size: 22px;
 }
 
 .responsive-countdown-text {
@@ -87,50 +106,51 @@
 
 @media (min-width: 576px) {
   .responsive-title {
-    font-size: 38px;
-  }
-
-  .responsive-text {
-    font-size: 22px;
+    font-size: 46px;
   }
 
   .responsive-subtitle {
     font-size: 26px;
   }
 
+  .responsive-text {
+    font-size: 22px;
+  }
+
   .responsive-countdown-text {
     font-size: 30px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
   .responsive-title {
-    font-size: 52px;
+    font-size: 62px;
+  }
+
+  .responsive-subtitle {
+    font-size: 32px;
   }
 
   .responsive-text {
     font-size: 28px;
   }
 
-  .responsive-subtitle {
-    font-size: 32px;
-  }
   .responsive-countdown-text {
     font-size: 36px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1080px) {
   .responsive-title {
     font-size: 86px;
   }
 
-  .responsive-text {
-    font-size: 30px;
-  }
-
   .responsive-subtitle {
     font-size: 38px;
+  }
+
+  .responsive-text {
+    font-size: 20px;
   }
 
   .responsive-countdown-text {
