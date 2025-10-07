@@ -6,7 +6,7 @@ import Link from "antd/es/typography/Link"
 
 const GiftTable = () => {
   return (
-    <Row justify={'center'} align={'middle'} gutter={4} style={{ textAlign: 'center', marginTop: 40, marginBottom: 12 }} >
+    <Row justify={'center'} align={'middle'} gutter={12} style={{ textAlign: 'center', marginTop: 40, marginBottom: 90 }} >
       <Col span={22}>
         <Title className="tangerine-bold responsive-title">Mesas de Regalos</Title>
       </Col>
@@ -19,7 +19,7 @@ const GiftTable = () => {
           style={{ textDecoration: "none" }}
         >
           <GlassCard style={{ width: "100%", cursor: "pointer" }}>
-            <AmazonOutlined className="responsive-subtitle" />
+            <AmazonOutlined className="responsive-title" />
             <Typography className="tangerine-bold responsive-text">Amazon</Typography>
           </GlassCard>
         </Link>
@@ -33,7 +33,7 @@ const GiftTable = () => {
           style={{ textDecoration: "none" }}
         >
           <GlassCard style={{ width: "100%", cursor: "pointer" }}>
-            <GiftOutlined className="responsive-subtitle" />
+            <GiftOutlined className="responsive-title" />
             <Typography className="tangerine-bold responsive-text">Liverpool</Typography>
           </GlassCard>
         </Link>
@@ -47,7 +47,7 @@ const GiftTable = () => {
           style={{ textDecoration: "none" }}
         >
           <GlassCard style={{ width: "100%", cursor: "pointer" }}>
-            <ShoppingCartOutlined className="responsive-subtitle" />
+            <ShoppingCartOutlined className="responsive-title" />
             <Typography className="tangerine-bold responsive-text">Sears</Typography>
           </GlassCard>
         </Link>
@@ -55,7 +55,7 @@ const GiftTable = () => {
 
       <Col span={24} style={{ marginTop: 12 }}>
         <GlassCard style={{ width: "100%", padding: 6 }}>
-          <GiftFilled className="responsive-subtitle" />
+          <GiftFilled className="responsive-title" />
           <Typography className="tangerine-regular responsive-text">
             También puedes hacer tu aportación en efectivo o transferencia.
           </Typography>

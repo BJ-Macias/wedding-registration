@@ -1,5 +1,5 @@
 
-import { Col, Image, Layout, message, Row, Space, theme, Typography } from 'antd'
+import { Col, Divider, Image, Layout, message, Row, Space, Tag, theme, Typography } from 'antd'
 import { Content } from 'antd/es/layout/layout'
 import CountdownToDate from './components/CountdownToDate'
 import GiftTable from './components/GiftTable'
@@ -59,8 +59,8 @@ function App() {
         }} />
         <Content style={{ position: 'relative', zIndex: 1 }}>
           <Row align={'middle'} justify={'center'} >
-            <Col xs={23} sm={22} md={16} lg={16} xl={14} xxl={14}>
-              <Row align={'middle'} justify={'center'}>
+            <Col xs={22} sm={22} md={16} lg={16} xl={14} xxl={14}>
+              <Row align={'middle'} justify={'center'} style={{ marginBottom: 90 }}>
                 <Col span={24} style={{ marginTop: 80 }}>
                   <Typography className='comic-relief-bold responsive-text' style={{ textAlign: 'center' }}>NEVER SAY NEVER</Typography>
                 </Col>
@@ -68,33 +68,21 @@ function App() {
                   <Typography className='imperial-script-regular  responsive-subtitle' style={{ textAlign: 'center', lineHeight: 0.7 }}>04 05 26</Typography>
                 </Col>
                 <Col
-                  span={12}
-                  // style={{
-                  //   backgroundImage: 'url(src/assets/chalkFrame.png)',
-                  //   backgroundSize: 'cover',
-                  //   backgroundPosition: 'center',
-                  //   backgroundRepeat: 'no-repeat',
-                  //   minHeight: '200px', // <-- Agrega altura mínima
-                  //   display: 'flex',
-                  //   alignItems: 'center',
-                  //   justifyContent: 'center',
-                  // }}
-
+                  span={14}
                   style={{
                     position: 'relative',
                     backgroundImage: 'url(src/assets/chalkFrame.png)',
                     backgroundSize: 'contain',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
-                    padding: '35px 10px',
+                    padding: '50px 10px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-
                   }}
 
                 >
-                  <Row align={'middle'} justify={'center'} style={{ margin: 20, lineHeight: 0.8 }}>
+                  <Row align={'middle'} justify={'center'} style={{ lineHeight: 0.8 }}>
                     <Col span={24} >
                       <SplitText
                         text="Celeste"
@@ -147,24 +135,23 @@ function App() {
               </Row>
 
               <Row align={'middle'} justify={'center'}>
-                <Col span={22} style={{ marginTop: 30 }}>
+                <Col span={22} style={{ marginBottom: 90 }}>
                   <CountdownToDate />
                 </Col>
               </Row>
 
-              {/* <RegisterForm /> */}
-
-              <Row align={'middle'} justify={'center'} gutter={20}>
-                <Col span={8}
+              <Row align={'middle'} justify={'center'} gutter={20} style={{ marginBottom: 120 }}>
+                <Col span={10}
                   style={{
                     position: 'relative',
                     backgroundImage: 'url(src/assets/verticalFrame.png)',
                     backgroundSize: 'contain',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
-                    padding: '40px 20px', // Ajusta según el diseño del marco
-                    height: '100%', // Asegura que el fondo se muestre completo
+                    padding: '100px 65px',
+                    height: '100%',
                     boxSizing: 'border-box',
+                    transform: 'rotate(-10deg)'
                   }}
                 >
                   <Row align={'middle'} justify={'center'}>
@@ -187,7 +174,7 @@ function App() {
                     </Col>
                   </Row>
                 </Col>
-                <Col span={8}>
+                <Col span={7}>
                   <Row align={'middle'} justify={'center'}>
                     <Space direction='vertical' size={'large'}>
                       <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
@@ -206,10 +193,10 @@ function App() {
                     </Space>
                   </Row>
                 </Col>
-                <Col span={8}>
+                <Col span={7}>
                   <Row align={'middle'} justify={'center'}>
                     <Space direction='vertical' size={'large'}>
-                      <Col span={24}>
+                      <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
                         <Image src='src/assets/ringBox.png' preview={false} style={{
                           width: '120px'
                         }} />
@@ -227,51 +214,191 @@ function App() {
                 </Col>
               </Row>
 
-              <Row align={'middle'} justify={'start'}>
+              <Row align={'top'} justify={'start'} style={{ marginBottom: 120 }}>
                 <Col span={12}>
-                  <Row align={'middle'} justify={'start'}>
+                  <Row align={'top'} justify={'start'}>
                     <Col span={24}>
                       <Typography className='meow-script-regular responsive-subtitle' style={{ textAlign: 'start' }}>Y así será...</Typography>
                     </Col>
-                    <Col span={16}>
+                    <Col span={24}>
                       <Typography className='comic-relief-bold responsive-text'>02.Mayo.2026</Typography>
                     </Col>
                     <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
-                      <Image src='src/assets/cake.png' preview={false} style={{ width: '160px' }} />
+                      <Image src='src/assets/cake.png' preview={false} style={{ width: '220px' }} />
                     </Col>
                   </Row>
                 </Col>
                 <Col span={12}>
-                  <Row>
-                    <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
-                      <Image src='src/assets/cups.png' preview={false} style={{ width: '100px' }} />
+                  <Row align={'top'} justify={'start'}>
+                    <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+                      <Image src='src/assets/cups.png' preview={false} style={{ width: '120px' }} />
                     </Col>
-                    <Col span={24}>
+                    <Col span={24} style={{
+                      position: 'relative',
+                      backgroundImage: 'url(src/assets/smallFrame.png)',
+                      backgroundSize: 'contain',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      padding: '80px 70px', // Ajusta según el diseño del marco
+                      height: '100%', // Asegura que el fondo se muestre completo
+                      boxSizing: 'border-box',
+                    }}>
+                      <Row align={'middle'} justify={'start'} >
+                        <Col span={9}><Typography className='comic-relief-bold responsive-text'>05:00 PM</Typography></Col>
+                        <Col span={15}>
+                          <Tag
+                            color="#869ed8"
+                            className='comic-relief-bold responsive-text'
+                            style={{ height: 30, alignContent: 'center' }}>Ingreso</Tag>
+                        </Col>
+                        <Divider size='middle' style={{ borderColor: '#869ed8' }} />
+                        <Col span={9}><Typography className='comic-relief-bold responsive-text'>05:30 PM</Typography>
+                        </Col>
+                        <Col span={15}>
+                          <Tag
+                            color="#9dadfb"
+                            className='comic-relief-bold responsive-text'
+                            style={{ height: 30, alignContent: 'center' }}>Ceremonia Civil</Tag>
+                        </Col>
+                        <Divider size='middle' style={{ borderColor: '#869ed8' }} />
+                        <Col span={9}><Typography className='comic-relief-bold responsive-text'>06:00 PM</Typography></Col>
+                        <Col span={15}>
+                          <Tag
+                            color="#869ed8"
+                            className='comic-relief-bold responsive-text'
+                            style={{ height: 30, alignContent: 'center' }}>Drinksitos</Tag>
+                        </Col>
+                        <Divider size='middle' style={{ borderColor: '#869ed8' }} />
+                        <Col span={9}><Typography className='comic-relief-bold responsive-text'>07:00 PM</Typography></Col>
+                        <Col span={15}>
+                          <Tag
+                            color="#9dadfb"
+                            className='comic-relief-bold responsive-text'
+                            style={{ height: 30, alignContent: 'center' }}>Bailongo</Tag>
+                        </Col>
+                      </Row>
                     </Col>
                   </Row>
                 </Col>
               </Row>
 
               <ImageCarousel />
-              <Row align={'middle'} justify={'center'} gutter={10}>
-                <Col span={8}>
+
+              <Row align={'middle'} justify={'center'} gutter={20} style={{ marginBottom: 90 }}>
+                <Col span={24} style={{
+                  position: 'relative',
+                  backgroundImage: 'url(src/assets/chalkFrame.png)',
+                  backgroundSize: 'contain',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
+                  padding: '90px 10px', // Ajusta según el diseño del marco
+                  boxSizing: 'border-box',
+                  marginBottom: 30
+                }}>
+                  <Typography className='meow-script-regular responsive-subtitle'>The Basic Stuff</Typography>
+                </Col>
+                <Row align={'middle'} justify={'center'} gutter={140}>
+                  <Col span={8} style={{
+                    position: 'relative',
+                    backgroundImage: 'url(src/assets/verticalFrame.png)',
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    padding: '134px 00px', // Ajusta según el diseño del marco
+                    boxSizing: 'border-box',
+                  }}>
+                    <Row align={'middle'} justify={'center'}>
+                      <Space direction='vertical' size={'middle'}>
+                        <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+                          <Image src='src/assets/shoes.png' preview={false} style={{ width: '130px' }} />
+                        </Col>
+                        <Col span={24}><Typography className='comic-relief-bold responsive-text' style={{ textAlign: 'center' }}>DRESS CODE</Typography></Col>
+                        <Col span={24}>
+                          <Typography style={{ fontSize: 16, textAlign: 'center' }}>
+                            Formal
+                          </Typography>
+                        </Col>
+                      </Space>
+                    </Row>
+                  </Col>
+                  <Col span={8} style={{
+                    position: 'relative',
+                    backgroundImage: 'url(src/assets/verticalFrame.png)',
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    padding: '98px 40px', // Ajusta según el diseño del marco
+                    boxSizing: 'border-box',
+                  }}>
+                    <Row align={'middle'} justify={'center'}>
+                      <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+                        <Image src='src/assets/letter.png' preview={false} style={{ width: '160px' }} />
+                      </Col>
+                      <Col span={24}><Typography className='comic-relief-bold responsive-text' style={{ textAlign: 'center' }} >MESA DE REGALOS</Typography></Col>
+                      <Col span={24}>
+                        <Typography style={{ fontSize: 16, textAlign: 'center' }}>
+                          Tu presencia es lo más importante para
+                          nosotros, sin embargo, agradecemos
+                          dentro de lo posible que los obsequios
+                          sean mediante las mesas de regalo por
+                          cuestiones de logística y transporte,
+                          regalos en efectivo o transferencia para
+                          nuestro Honeymoon Fund también son
+                          bienvenidos
+                        </Typography>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col span={8} style={{
+                    position: 'relative',
+                    backgroundImage: 'url(src/assets/verticalFrame.png)',
+                    backgroundSize: 'contain',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                    padding: '130px 36px', // Ajusta según el diseño del marco
+                    boxSizing: 'border-box',
+                  }}>
+                    <Row align={'middle'} justify={'center'}>
+                      <Space direction='vertical' size={'large'}>
+                        <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+                          <Image src='src/assets/notes.png' preview={false} style={{ width: '180px' }} />
+                        </Col>
+                        <Col span={24}><Typography className='comic-relief-bold responsive-text' style={{ textAlign: 'center' }}>SONG REQUEST</Typography></Col>
+                        <Col span={24}>
+                          <Typography style={{ fontSize: 16, textAlign: 'center' }}>
+                            Envíanos una canción que te guste, trataremos de que la escuches en el transcurso de la noche
+                          </Typography>
+                        </Col>
+                      </Space>
+                    </Row>
+                  </Col>
+                </Row>
+              </Row>
+
+              <Row>
+                <Col span={24}>
+                  <GiftTable />
+                </Col>
+              </Row>
+
+              <ImageCarousel />
+
+              <Row align={'middle'} justify={'center'} gutter={10} style={{ marginBottom: 30 }}>
+                <Col span={10}>
                   <Typography className='tangerine-bold responsive-subtitle' style={{ textAlign: 'center' }}>Dirección:</Typography>
                   <Typography className='tangerine-regular responsive-text' style={{ textAlign: "center", cursor: "pointer" }} onClick={handleCopy}>
                     {text}
                   </Typography>
                 </Col>
-
                 <Col span={14} style={{ height: "40vh", alignContent: 'center' }}>
                   <HereMap />
                 </Col>
-
-                <Col span={22}>
-                  <GiftTable />
-                </Col>
               </Row>
+
+              <RegisterForm />
             </Col>
           </Row>
-        </Content>
+        </Content >
       </Layout >
     </>
   )

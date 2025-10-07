@@ -124,7 +124,7 @@
 
 @media (min-width: 720px) {
   .responsive-title {
-    font-size: 62px;
+    font-size: 86px;
   }
 
   .responsive-subtitle {
@@ -142,18 +142,18 @@
 
 @media (min-width: 1080px) {
   .responsive-title {
-    font-size: 86px;
+    font-size: 142px;
   }
 
   .responsive-subtitle {
-    font-size: 38px;
+    font-size: 68px;
   }
 
   .responsive-text {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .responsive-countdown-text {
-    font-size: 40px;
+    font-size: 60px;
   }
 }
