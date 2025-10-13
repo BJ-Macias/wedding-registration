@@ -27,14 +27,14 @@ const RegisterForm = () => {
   return (
     <>
       <Row align={'middle'} justify={'center'} style={{ marginBottom: 90 }}>
-        <Col span={12}>
+        <Col span={12}  xs={24} sm={24} md={16} lg={8} xxl={8}>
           <GlassCard style={{ width: "auto", cursor: "pointer", alignContent: 'center', justifyContent: 'center'}}>
             <Row align={'middle'} justify={'center'} >
               <Col span={20}>
-                <Typography className='tangerine-bold responsive-subtitle' style={{ textAlign: 'center' }}>Confirma tu Asistencia</Typography>
+                <Typography className='tangerine-bold responsive-countdown-text' style={{ textAlign: 'center' }}>Confirma tu Asistencia</Typography>
               </Col>
               <Col span={20} style={{ textAlign: 'center', marginBottom: 10 }}>
-                <UserAddOutlined className='responsive-subtitle' />
+                <UserAddOutlined className='responsive-countdown-text' />
               </Col>
               <Col span={20}>
                 <Form

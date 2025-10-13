@@ -13,7 +13,7 @@ interface TimeLeft {
 }
 
 const CountdownToDate = () => {
-  const targetDate = new Date('2026-05-02T15:00:00')
+  const targetDate = new Date('2026-09-02T15:00:00')
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({})
   const [expired, setExpired] = useState(false)
 
@@ -65,9 +65,9 @@ const CountdownToDate = () => {
 
     return (
       <div>
-        {months !== undefined && <Text className='tangerine-bold responsive-countdown-text  '>{months} mes{months !== 1 ? 'es' : ''} • </Text>}
-        {weeks !== undefined && weeks! > 0 && <Text className='tangerine-bold responsive-countdown-text '> {weeks} semana{weeks !== 1 ? 's' : ''} • </Text>}
-        {days !== undefined && days! > 0 && <Text className='tangerine-bold responsive-countdown-text '> {days} día{days !== 1 ? 's' : ''} • </Text>}
+        {months !== undefined && <Text className='tangerine-bold responsive-countdown-text'>{months} mes{months !== 1 ? 'es' : ''} • </Text>}
+        {weeks !== undefined && weeks! > 0 && <Text className='tangerine-bold responsive-countdown-text'> {weeks} semana{weeks !== 1 ? 's' : ''} • </Text>}
+        {days !== undefined && days! > 0 && <Text className='tangerine-bold responsive-countdown-text'> {days} día{days !== 1 ? 's' : ''} • </Text>}
         <Text className='tangerine-bold responsive-countdown-text '> {hours}h •</Text>
         <Text className='tangerine-bold responsive-countdown-text '> {minutes}m •</Text>
         <Text className='tangerine-bold responsive-countdown-text '> {seconds}s</Text>
@@ -77,8 +77,8 @@ const CountdownToDate = () => {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      {!expired && <Text className='tangerine-bold responsive-subtitle' style={{ textAlign: 'center' }}>Período para el Magnoevento</Text>}
-      {expired ? <Text className='tangerine-bold responsive-title' style={{ textAlign: 'center' }}>¡El evento ha comenzado!</Text> : renderTime()}
+      {!expired && <Text className='tangerine-bold response-date-title' style={{ textAlign: 'center' }}>Período para el Magnoevento</Text>}
+      {expired ? <Text className='tangerine-bold responsive-title' style={{ textAlign: 'center', lineHeight: 0.9 }}>¡El evento ha comenzado!</Text> : renderTime()}
     </div>
   )
 }
