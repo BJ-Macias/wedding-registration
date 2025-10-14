@@ -67,6 +67,16 @@
   font-style: italic;
 }
 
+.tinos-regular-italic-xl {
+  font-family: "Tinos", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.rotate-frame {
+  transform: rotate(-10deg);
+}
 
 /* glass-card.css */
 .glass-card {
@@ -146,6 +156,10 @@
   padding: 90px 30px !important;
 }
 
+.responsive-padding-stuff-section {
+  padding: 90px 30px !important;
+}
+
 .responsive-padding-schedule {
   padding: 47px 32px;
 }
@@ -215,6 +229,10 @@
     padding: 90px 30px;
   }
 
+  .responsive-padding-stuff-section {
+    padding: 90px 30px !important;
+  }
+
   .responsive-padding-schedule {
     padding: 47px 28px;
   }
@@ -239,7 +257,7 @@
 /* md: >= 768px */
 @media (min-width: 768px) {
   .responsive-title {
-    font-size: 104px;
+    font-size: 54px;
   }
 
   .response-date-title {
@@ -325,6 +343,10 @@
     padding: 90px 30px;
   }
 
+  .responsive-padding-stuff-section {
+    padding: 90px 30px !important;
+  }
+
   .responsive-padding-schedule {
     padding: 40px 30px;
   }
@@ -380,6 +402,10 @@
     padding: 100px 65px;
   }
 
+  .responsive-padding-stuff-section {
+    padding: 90px 30px !important;
+  }
+
   .responsive-padding-schedule {
     padding: 40px 30px;
   }
@@ -404,46 +430,64 @@
 /* xxl: >= 1600px */
 @media (min-width: 1600px) {
   .responsive-title {
-    font-size: 170px;
+    font-size: 200px;
   }
 
   .responsive-subtitle {
+    font-size: 28px;
+  }
+
+  .response-date-title {
     font-size: 88px;
   }
 
   .responsive-subsection {
-    font-size: 46px;
+    font-size: 68px;
   }
 
   .responsive-text {
-    font-size: 44px;
+    font-size: 24px;
   }
 
   .responsive-countdown-text {
     font-size: 88px;
   }
 
+  .responsive-chalkframe-pading {
+    padding: 64px 10px !important;
+  }
+
   .responsive-padding-col {
-    padding: 100px 65px;
+    padding: 100px 74px !important;
+  }
+
+  .responsive-padding-stuff-section {
+    padding: 116px 74px !important;
   }
 
   .responsive-padding-schedule {
-    padding: 40px 30px;
+    padding: 64px 60px !important;
   }
 
   .responsive-padding-stuff-1 {
-    padding: 42px 78px;
+    padding: 128px 0px !important;
   }
 
   .responsive-padding-stuff-2 {
-    padding: 42px 78px;
+    padding: 78px 36px !important;
   }
 
   .responsive-padding-stuff-3 {
-    padding: 42px 78px;
+    padding: 112px 70px !important;
   }
 
-  .responsive-cake-image-width {
-    width: 180px;
+  .responsive-cake-image-width,
+  .responsive-cake-image-width img {
+    width: 276px !important;
+  }
+
+  .responsive-cups-image-width,
+  .responsive-cups-image-width img {
+    width: 130px !important;
   }
 }

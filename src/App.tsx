@@ -8,10 +8,14 @@ import HereMap from './components/HereMap'
 import ImageCarousel from './components/ImageCarousel'
 import RegisterForm from './components/RegisterForm'
 import SplitText from './components/SplitText'
+import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
+
 
 const { useToken } = theme
 
 function App() {
+  const screens = useBreakpoint();
+
   const { token } = useToken()
 
   const [messageApi, contextHolder] = message.useMessage()
@@ -37,38 +41,40 @@ function App() {
       }}>
         <Image className='resposive-xl-background-image' src='src/assets/stars.png' preview={false} style={{
           position: 'absolute',
-          top: '-20px',     // sobresale hacia arriba
-          left: '-147px',    // sobresale hacia la izquierda
+          top: '-20px',
+          left: '-147px',
           zIndex: 0,
-          // width: '300px',   // ajusta según el tamaño deseado
+
         }} />
         <Image className='resposive-xl-background-image' src='src/assets/rings.png' preview={false} style={{
           position: 'absolute',
-          top: '-80px',     // sobresale hacia arriba
-          right: '-100px',    // sobresale hacia la izquierda
+          top: '-80px',
+          right: '-100px',
           zIndex: 0,
-          // width: '350px',   // ajusta según el tamaño deseado
+
           transform: 'rotate(-110deg)'
         }} />
         <Image src='src/assets/stars.png' preview={false} style={{
           position: 'absolute',
-          top: '+90px',     // sobresale hacia arriba
-          right: '+200px',    // sobresale hacia la izquierda
+          top: '+90px',
+          right: '+200px',
           zIndex: 0,
-          width: '70px',   // ajusta según el tamaño deseado
+          width: '70px',
         }} />
         <Content style={{ position: 'relative', zIndex: 1 }}>
           <Row align={'middle'} justify={'center'} >
-            <Col xs={23} sm={23} md={16} lg={16} xl={14} xxl={14}>
-              <Row align={'middle'} justify={'space-evenly'} style={{ marginBottom: 90 }}>
-                <Col span={24} style={{ marginTop: 80 }}>
-                  <Typography className='comic-relief-bold responsive-subtitle' style={{ textAlign: 'center' }}>NEVER SAY NEVER</Typography>
+            <Col xs={23} sm={23} md={16} lg={16} xl={16} xxl={16}>
+              <Row align={'middle'} justify={'space-evenly'} style={{ marginBottom: 120 }}>
+                <Col span={24} style={{ marginTop: 150 }}>
+                  <Typography className='comic-relief-bold responsive-subtitle' style={{ textAlign: 'center', color: '#869ed8', marginBottom: 30 }}>
+                    NEVER SAY NEVER
+                  </Typography>
                 </Col>
                 <Col span={2} xs={0} sm={2} md={2} lg={2} xl={2} xxl={2}>
                   <Typography className='imperial-script-regular response-date-title' style={{ textAlign: 'center', lineHeight: 0.7 }}>04 05 26</Typography>
                 </Col>
                 <Col
-                  span={14} xs={24} sm={20} md={18} lg={14} xl={14} xxl={14}
+                  span={14} xs={24} sm={20} md={18} lg={16} xl={18} xxl={18}
                   className='responsive-chalkframe-pading'
                   style={{
                     position: 'relative',
@@ -126,22 +132,22 @@ function App() {
                   <Typography className='imperial-script-regular response-date-title' style={{ textAlign: 'center', lineHeight: 0.7 }}>04 05 26</Typography>
                 </Col>
                 <Col span={24} style={{ marginTop: 20 }}>
-                  <Typography className='comic-relief-bold responsive-subtitle' style={{ textAlign: 'center' }}>¡Acompáñanos en este día tan especial!</Typography>
+                  <Typography className='comic-relief-bold responsive-subtitle' style={{ textAlign: 'center', color: '#869ed8' }}>¡Acompáñanos en este día tan especial!</Typography>
                 </Col>
                 <Col span={24}>
-                  <Typography className='meow-script-regular response-date-title' style={{ textAlign: 'center' }}>Quinta Majam</Typography>
+                  <Typography className='meow-script-regular responsive-subsection' style={{ textAlign: 'center', color: '#9dadfb' }}>Quinta Majam</Typography>
                 </Col>
               </Row>
 
               <Row align={'middle'} justify={'center'}>
-                <Col span={24} style={{ marginBottom: 90 }}>
+                <Col span={24} style={{ marginBottom: 160 }}>
                   <CountdownToDate />
                 </Col>
               </Row>
 
               <Row align={'middle'} justify={'center'} gutter={20} style={{ marginBottom: 120 }}>
                 <Col span={10} xs={23} sm={23} md={22} lg={10} xxl={10}
-                  className='responsive-padding-col'
+                  className={`responsive-padding-col ${screens.lg ? 'rotate-frame' : ''}`}
                   style={{
                     position: 'relative',
                     backgroundImage: 'url(src/assets/verticalFrame.png)',
@@ -153,10 +159,10 @@ function App() {
                   }}>
                   <Row align={'middle'} justify={'center'}>
                     <Col span={24}>
-                      <Typography className='comic-relief-bold responsive-subtitle' style={{ textAlign: 'center' }}>DE LA "A" A LA "Z"</Typography>
+                      <Typography className='comic-relief-bold responsive-subtitle' style={{ textAlign: 'center', color: '#9dadfb' }}>DE LA "A" A LA "Z"</Typography>
                     </Col>
                     <Col span={24}>
-                      <Typography className='meow-script-regular response-date-title'>Cel & Jairo</Typography>
+                      <Typography className='meow-script-regular response-date-title' style={{ color: '#869ed8' }}>Cel & Jairo</Typography>
                     </Col>
                     <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
                       <Image src='src/assets/rings.png' preview={false} style={{
@@ -165,44 +171,50 @@ function App() {
                       }} />
                     </Col>
                     <Col span={24}>
-                      <Typography className='tinos-regular-italic' style={{ textAlign: 'center' }}>
+                      <Typography
+                        className={screens.lg ? 'tinos-regular-italic-xl' : 'tinos-regular-italic'}
+                        style={{ textAlign: 'center', color: '#869ed8' }}>
                         Nos conocimos en nuestro taller de preparatoria, iniciamos nuestro noviazgo 1 mes antes de graduarnos y, ahora, tras 10 años que se han presentado como una montaña rusa, conel amor como guía, hemos decidido enlazar nuestras vidas ante la ley, para toda la vida... Y después de esta...
                       </Typography>
                     </Col>
                   </Row>
                 </Col>
-                <Col span={7} xs={23} sm={23} md={22} lg={10} xxl={10}>
-                  <Row align={'middle'} justify={'center'} className='responsive-padding-col'>
+                <Col span={7} xs={23} sm={23} md={22} lg={10} xxl={7}>
+                  <Row align={'middle'} justify={'center'} className={!screens.lg ? 'responsive-padding-col' : ''}>
                     <Space direction='vertical' size={'large'}>
                       <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
                         <Image src='src/assets/giftTable.png' preview={false} style={{
-                          width: '120px'
+                          width: '160px'
                         }} />
                       </Col>
                       <Col span={24}>
-                        <Typography className='comic-relief-bold responsive-text' style={{ textAlign: 'center' }}>How did we meet, anyway?</Typography>
+                        <Typography className='comic-relief-bold responsive-subtitle' style={{ textAlign: 'center', color: '#9dadfb' }}>How did we meet, anyway?</Typography>
                       </Col>
                       <Col span={24}>
-                        <Typography className='tinos-regular-italic' style={{ textAlign: 'center' }}>
+                        <Typography
+                          className={screens.lg ? 'tinos-regular-italic-xl' : 'tinos-regular-italic'}
+                          style={{ textAlign: 'center', color: '#869ed8' }}>
                           Nos conocimos en un taller de la preparatoria, y empezamos nuestra relación 1 mes antes de salir de la misma... Y dijeron que no durariamos porque nuestras casas se encontraban a solo 44km de distancia... LOL
                         </Typography>
                       </Col>
                     </Space>
                   </Row>
                 </Col>
-                <Col span={7} xs={23} sm={23} md={22} lg={10} xxl={10}>
-                  <Row align={'middle'} justify={'center'} className='responsive-padding-col'>
+                <Col span={7} xs={23} sm={23} md={22} lg={10} xxl={7}>
+                  <Row align={'middle'} justify={'center'} className={!screens.lg ? 'responsive-padding-col' : ''}>
                     <Space direction='vertical' size={'large'}>
                       <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
                         <Image src='src/assets/ringBox.png' preview={false} style={{
-                          width: '120px'
+                          width: '140px'
                         }} />
                       </Col>
                       <Col span={24}>
-                        <Typography className='comic-relief-bold responsive-text' style={{ textAlign: 'center' }}>How the question was popped?</Typography>
+                        <Typography className='comic-relief-bold responsive-subtitle' style={{ textAlign: 'center', color: '#9dadfb' }}>How the question was popped?</Typography>
                       </Col>
                       <Col span={24}>
-                        <Typography className='tinos-regular-italic' style={{ textAlign: 'center' }}>
+                        <Typography
+                          className={screens.lg ? 'tinos-regular-italic-xl' : 'tinos-regular-italic'}
+                          style={{ textAlign: 'center', color: '#869ed8' }}>
                           Ella le dijo: “en la playa no” y él dijo “si se lo pido en la playa no lo va a sospechar” and here we are...
                         </Typography>
                       </Col>
@@ -211,23 +223,26 @@ function App() {
                 </Col>
               </Row>
 
-              <Row align={'top'} justify={'center'} style={{ marginBottom: 120 }}>
-                <Col span={12} xs={24} sm={24} md={22} lg={10} xxl={10} style={{ padding: '0px 10px' }}>
+              <Row align={'top'} justify={'center'} style={{ marginBottom: 390 }}>
+                <Col span={12} xs={24} sm={24} md={22} lg={11} xxl={11} style={{ padding: '0px 10px' }}>
                   <Row align={'top'} justify={'start'}>
                     <Col span={24}>
-                      <Typography className='meow-script-regular response-date-title' style={{ textAlign: 'start' }}>Y así será...</Typography>
+                      <Typography
+                        className='meow-script-regular responsive-subsection'
+                        style={{ textAlign: 'start', color: '#9dadfb' }}>Y así será...
+                      </Typography>
                     </Col>
                     <Col span={24}>
-                      <Typography className='comic-relief-bold responsive-text'>02.Mayo.2026</Typography>
+                      <Typography className='comic-relief-bold responsive-subtitle' style={{ color: '#869ed8' }}>02.Mayo.2026</Typography>
                     </Col>
                     <Col span={24} style={{ display: 'flex', justifyContent: 'center', margin: '10px 0' }}>
                       <Image className='responsive-cake-image-width' src='src/assets/cake.png' preview={false} />
                     </Col>
                   </Row>
                 </Col>
-                <Col span={12} xs={24} sm={23} md={22} lg={10} xxl={10}>
+                <Col span={12} xs={24} sm={23} md={22} lg={11} xxl={11}>
                   <Row align={'top'} justify={'start'}>
-                    <Col span={24} style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
+                    <Col span={24} style={{ display: 'flex', justifyContent: 'center', margin: '0 0 20px 0' }}>
                       <Image className='responsive-cups-image-width' src='src/assets/cups.png' preview={false} />
                     </Col>
                     <Col span={24}>
@@ -239,39 +254,39 @@ function App() {
                           backgroundSize: 'contain',
                           backgroundPosition: 'center',
                           backgroundRepeat: 'no-repeat',
-                          height: '100%', // Asegura que el fondo se muestre completo
+                          height: '100%',
                           boxSizing: 'border-box',
                         }}>
-                        <Col span={9}><Typography className='comic-relief-bold responsive-subtitle'>05:00 PM</Typography></Col>
+                        <Col span={9}><Typography className='comic-relief-bold responsive-text'>05:00 PM</Typography></Col>
                         <Col span={15}>
                           <Tag
                             color="#869ed8"
-                            className='comic-relief-bold responsive-subtitle'
+                            className='comic-relief-bold responsive-text'
                             style={{ height: 30, alignContent: 'center' }}>Ingreso</Tag>
                         </Col>
-                        <Divider size='small' style={{ borderColor: '#869ed8' }} />
-                        <Col span={9}><Typography className='comic-relief-bold responsive-subtitle'>05:30 PM</Typography>
+                        <Divider size={screens.lg ? 'large' : 'small'} style={{ borderColor: '#869ed8' }} />
+                        <Col span={9}><Typography className='comic-relief-bold responsive-text'>05:30 PM</Typography>
                         </Col>
                         <Col span={15}>
                           <Tag
                             color="#9dadfb"
-                            className='comic-relief-bold responsive-subtitle'
+                            className='comic-relief-bold responsive-text'
                             style={{ height: 30, alignContent: 'center' }}>Ceremonia Civil</Tag>
                         </Col>
-                        <Divider size='small' style={{ borderColor: '#869ed8' }} />
-                        <Col span={9}><Typography className='comic-relief-bold responsive-subtitle'>06:00 PM</Typography></Col>
+                        <Divider size={screens.lg ? 'large' : 'small'} style={{ borderColor: '#869ed8' }} />
+                        <Col span={9}><Typography className='comic-relief-bold responsive-text'>06:00 PM</Typography></Col>
                         <Col span={15}>
                           <Tag
                             color="#869ed8"
-                            className='comic-relief-bold responsive-subtitle'
+                            className='comic-relief-bold responsive-text'
                             style={{ height: 30, alignContent: 'center' }}>Drinksitos</Tag>
                         </Col>
-                        <Divider size='small' style={{ borderColor: '#869ed8' }} />
-                        <Col span={9}><Typography className='comic-relief-bold responsive-subtitle'>07:00 PM</Typography></Col>
+                        <Divider size={screens.lg ? 'large' : 'small'} style={{ borderColor: '#869ed8' }} />
+                        <Col span={9}><Typography className='comic-relief-bold responsive-text'>07:00 PM</Typography></Col>
                         <Col span={15}>
                           <Tag
                             color="#9dadfb"
-                            className='comic-relief-bold responsive-subtitle'
+                            className='comic-relief-bold responsive-text'
                             style={{ height: 30, alignContent: 'center' }}>Bailongo</Tag>
                         </Col>
                       </Row>
@@ -282,9 +297,9 @@ function App() {
 
               <ImageCarousel />
 
-              <Row align={'middle'} justify={'center'} gutter={20} style={{ marginBottom: 90 }}>
-                <Col span={24} xs={23} sm={23} md={23} lg={24} xxl={24}
-                  className='responsive-padding-col'
+              <Row align={'middle'} justify={'center'} gutter={20} style={{ marginBottom: 300 }}>
+                <Col span={24} xs={23} sm={23} md={23} lg={16} xxl={16}
+                  className='responsive-padding-stuff-section'
                   style={{
                     position: 'relative',
                     backgroundImage: 'url(src/assets/chalkFrame.png)',
@@ -292,10 +307,11 @@ function App() {
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
                     boxSizing: 'border-box',
+                    marginBottom: 30
                   }}>
-                  <Typography className='meow-script-regular responsive-subsection'>The Basic Stuff</Typography>
+                  <Typography className='meow-script-regular response-date-title' style={{ color: '#869ed8' }}>The Basic Stuff</Typography>
                 </Col>
-                <Row align={'middle'} justify={'center'} gutter={140}>
+                <Row align={'middle'} justify={'center'} gutter={40}>
                   <Col xs={24} sm={24} md={16} lg={8} xxl={8}>
                     <Row align={'middle'} justify={'center'}
                       className='responsive-padding-stuff-1'
@@ -311,9 +327,19 @@ function App() {
                         <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
                           <Image className='responsive-shoes-image-width' src='src/assets/shoes.png' preview={false} />
                         </Col>
-                        <Col span={24}><Typography className='comic-relief-bold responsive-text' style={{ textAlign: 'center' }}>DRESS CODE</Typography></Col>
                         <Col span={24}>
-                          <Typography className='tinos-regular-italic' style={{ textAlign: 'center' }}> Formal</Typography>
+                          <Typography
+                            className='comic-relief-bold responsive-subtitle'
+                            style={{ textAlign: 'center', color: '#869ed8' }}>
+                            DRESS CODE
+                          </Typography>
+                        </Col>
+                        <Col span={24}>
+                          <Typography
+                            className={screens.lg ? 'tinos-regular-italic-xl' : 'tinos-regular-italic'}
+                            style={{ textAlign: 'center', color: '#9dadfb' }}>
+                            Formal
+                          </Typography>
                         </Col>
                       </Space>
                     </Row>
@@ -332,9 +358,16 @@ function App() {
                       <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
                         <Image src='src/assets/letter.png' preview={false} style={{ width: '160px' }} />
                       </Col>
-                      <Col span={24}><Typography className='comic-relief-bold responsive-text' style={{ textAlign: 'center' }} >MESA DE REGALOS</Typography></Col>
                       <Col span={24}>
-                        <Typography className='tinos-regular-italic' style={{ textAlign: 'center' }}>
+                        <Typography className='comic-relief-bold responsive-subtitle'
+                          style={{ textAlign: 'center', color: '#869ed8' }} >
+                          MESA DE REGALOS
+                        </Typography>
+                      </Col>
+                      <Col span={24}>
+                        <Typography
+                          className={screens.lg ? 'tinos-regular-italic-xl' : 'tinos-regular-italic'}
+                          style={{ textAlign: 'center', color: '#9dadfb' }}>
                           Tu presencia es lo más importante para
                           nosotros, sin embargo, agradecemos
                           dentro de lo posible que los obsequios
@@ -362,9 +395,16 @@ function App() {
                         <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
                           <Image src='src/assets/notes.png' preview={false} style={{ width: '180px' }} />
                         </Col>
-                        <Col span={24}><Typography className='comic-relief-bold responsive-text' style={{ textAlign: 'center' }}>SONG REQUEST</Typography></Col>
                         <Col span={24}>
-                          <Typography className='tinos-regular-italic' style={{ textAlign: 'center' }}>
+                          <Typography className='comic-relief-bold responsive-subtitle'
+                            style={{ textAlign: 'center', color: '#869ed8' }}>
+                            SONG REQUEST
+                          </Typography>
+                        </Col>
+                        <Col span={24}>
+                          <Typography
+                            className={screens.lg ? 'tinos-regular-italic-xl' : 'tinos-regular-italic'}
+                            style={{ textAlign: 'center', color: '#9dadfb' }}>
                             Envíanos una canción que te guste, trataremos de que la escuches en el transcurso de la noche
                           </Typography>
                         </Col>
@@ -374,28 +414,32 @@ function App() {
                 </Row>
               </Row>
 
+              <ImageCarousel />
+
+              <GlassCard style={{ width: "auto", cursor: "pointer", alignContent: 'center', justifyContent: 'center', marginBottom: 160 }}>
+                <Row align={'middle'} justify={'space-around'} gutter={10}>
+                  <Col span={10} xs={24} sm={24} md={16} lg={8} xxl={8}>
+                    <Typography className='tinos-regular-italic responsive-subtitle' style={{ textAlign: 'center' }}>Dirección del evento:</Typography>
+                    <Typography className='tinos-regular-italic responsive-text' style={{ textAlign: "center", cursor: "pointer" }} onClick={handleCopy}>
+                      {text}
+                    </Typography>
+                  </Col>
+                  <Col span={14} xs={24} sm={24} md={16} lg={12} xxl={12}
+                    style={{ height: "40vh", alignContent: 'center' }}>
+                    <HereMap />
+                  </Col>
+                </Row>
+
+              </GlassCard>
+
+              <RegisterForm />
+
               <Row>
                 <Col span={24}>
                   <GiftTable />
                 </Col>
               </Row>
 
-              <ImageCarousel />
-
-              <Row align={'middle'} justify={'center'} gutter={10} style={{ marginBottom: 30 }}>
-                <Col span={10} xs={24} sm={24} md={16} lg={8} xxl={8}>
-                  <Typography className='tinos-regular-italic responsive-subtitle' style={{ textAlign: 'center' }}>Dirección:</Typography>
-                  <Typography className='tinos-regular-italic' style={{ textAlign: "center", cursor: "pointer" }} onClick={handleCopy}>
-                    {text}
-                  </Typography>
-                </Col>
-                <Col span={14} xs={24} sm={24} md={16} lg={8} xxl={8}
-                  style={{ height: "40vh", alignContent: 'center' }}>
-                  <HereMap />
-                </Col>
-              </Row>
-
-              <RegisterForm />
             </Col>
           </Row>
         </Content >
