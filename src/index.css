@@ -58,7 +58,7 @@
   font-family: "Tinos", serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .tinos-bold-italic {
@@ -125,11 +125,11 @@
 }
 
 .responsive-title {
-  font-size: 90px;
+  font-size: 110px;
 }
 
 .response-date-title {
-  font-size: 34px;
+  font-size: 48px;
 }
 
 .responsive-subtitle {
@@ -145,15 +145,15 @@
 }
 
 .responsive-countdown-text {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .responsive-chalkframe-pading {
-  padding: 21px 10px;
+  padding: 33px 0px;
 }
 
 .responsive-padding-col {
-  padding: 90px 30px !important;
+  padding: 126px 62px !important;
 }
 
 .responsive-padding-stuff-section {
@@ -161,19 +161,19 @@
 }
 
 .responsive-padding-schedule {
-  padding: 47px 32px;
+  padding: 77px 34px;
 }
 
 .responsive-padding-stuff-1 {
-  padding: 90px 0px;
+  padding: 148px 0px;
 }
 
 .responsive-padding-stuff-2 {
-  padding: 60px 40px !important;
+  padding: 112px 70px !important;
 }
 
 .responsive-padding-stuff-3 {
-  padding: 75px 112px !important;
+  padding: 136px 102px !important;
 }
 
 .responsive-cake-image-width,

@@ -225,14 +225,14 @@ function App() {
 
               <Row align={'top'} justify={'center'} style={{ marginBottom: 390 }}>
                 <Col span={12} xs={24} sm={24} md={22} lg={11} xxl={11} style={{ padding: '0px 10px' }}>
-                  <Row align={'top'} justify={'start'}>
-                    <Col span={24}>
+                  <Row align={'top'} justify={'space-around'}>
+                    <Col span={22}>
                       <Typography
                         className='meow-script-regular responsive-subsection'
                         style={{ textAlign: 'start', color: '#9dadfb' }}>Y así será...
                       </Typography>
                     </Col>
-                    <Col span={24}>
+                    <Col span={22}>
                       <Typography className='comic-relief-bold responsive-subtitle' style={{ color: '#869ed8' }}>02.Mayo.2026</Typography>
                     </Col>
                     <Col span={24} style={{ display: 'flex', justifyContent: 'center', margin: '10px 0' }}>
@@ -309,7 +309,11 @@ function App() {
                     boxSizing: 'border-box',
                     marginBottom: 30
                   }}>
-                  <Typography className='meow-script-regular response-date-title' style={{ color: '#869ed8' }}>The Basic Stuff</Typography>
+                  <Typography
+                    className='meow-script-regular response-date-title'
+                    style={{ color: '#869ed8' }}>
+                    The Basic Stuff
+                  </Typography>
                 </Col>
                 <Row align={'middle'} justify={'center'} gutter={40}>
                   <Col xs={24} sm={24} md={16} lg={8} xxl={8}>

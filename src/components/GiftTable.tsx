@@ -20,7 +20,7 @@ const GiftTable = () => {
         >
           <GlassCard style={{ width: "100%", cursor: "pointer" }}>
             <AmazonOutlined className="responsive-title" />
-            <Typography className="tangerine-bold responsive-text">Amazon</Typography>
+            <Typography className="tangerine-bold response-date-title">Amazon</Typography>
           </GlassCard>
         </Link>
       </Col>
@@ -34,7 +34,7 @@ const GiftTable = () => {
         >
           <GlassCard style={{ width: "100%", cursor: "pointer" }}>
             <GiftOutlined className="responsive-title" />
-            <Typography className="tangerine-bold responsive-subtitle">Liverpool</Typography>
+            <Typography className="tangerine-bold response-date-title">Liverpool</Typography>
           </GlassCard>
         </Link>
       </Col>
@@ -48,7 +48,7 @@ const GiftTable = () => {
         >
           <GlassCard style={{ width: "100%", cursor: "pointer" }}>
             <ShoppingCartOutlined className="responsive-title" />
-            <Typography className="tangerine-bold responsive-subtitle">Sears</Typography>
+            <Typography className="tangerine-bold response-date-title">Sears</Typography>
           </GlassCard>
         </Link>
       </Col>
@@ -56,7 +56,7 @@ const GiftTable = () => {
       <Col span={24} style={{ marginTop: 12 }}>
         <GlassCard style={{ width: "100%", padding: 6 }}>
           <GiftFilled className="responsive-title" />
-          <Typography className="tangerine-regular responsive-subtitle">
+          <Typography className="tangerine-regular response-date-title">
             También puedes hacer tu aportación en efectivo o transferencia.
           </Typography>
         </GlassCard>
