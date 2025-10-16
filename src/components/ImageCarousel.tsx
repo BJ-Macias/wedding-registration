@@ -3,7 +3,7 @@ import { Carousel, Col, Image, Row } from 'antd'
 const ImageCarousel = () => {
   return (
     <>
-      <Row align={'middle'} justify={'center'} style={{ marginBottom: 200}}>
+      <Row align={'middle'} justify={'center'} style={{ marginBottom: 100}}>
         <Col span={24}>
           <Carousel autoplay={{ dotDuration: true }} autoplaySpeed={4000}>
             <Image src='https://www.blogdelfotografo.com/wp-content/uploads/2016/09/Lightpainting.jpg'

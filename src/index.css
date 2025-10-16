@@ -136,8 +136,16 @@
   font-size: 18px;
 }
 
+.responsive-stuff-section-title {
+  font-size: 60px;
+}
+
+.responsive-frame-section {
+  font-size: 28px;
+}
+
 .responsive-subsection {
-  font-size: 46px;
+  font-size: 46px !important;
 }
 
 .responsive-text {
@@ -234,7 +242,7 @@
   }
 
   .responsive-padding-schedule {
-    padding: 47px 28px;
+    padding: 24px 78px;
   }
 
   .responsive-padding-stuff-1 {
@@ -257,51 +265,51 @@
 /* md: >= 768px */
 @media (min-width: 768px) {
   .responsive-title {
-    font-size: 54px;
+    font-size: 114px;
   }
 
   .response-date-title {
-    font-size: 58px;
+    font-size: 54px;
   }
 
   .responsive-subtitle {
-    font-size: 32px;
+    font-size: 20px;
   }
 
   .responsive-subsection {
-    font-size: 46px;
+    font-size: 46px !important;
   }
 
   .responsive-text {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .responsive-countdown-text {
-    font-size: 36px;
+    font-size: 54px;
   }
 
   .responsive-chalkframe-pading {
-    padding: 21px 10px;
+    padding: 38px 0px !important;
   }
 
   .responsive-padding-col {
-    padding: 90px 30px;
+    padding: 96px 138px !important;
   }
 
   .responsive-padding-schedule {
-    padding: 14px 25px;
+    padding: 74px 118px !important;
   }
 
   .responsive-padding-stuff-1 {
-    padding: 42px 78px;
+    padding: 110px 78px !important;
   }
 
   .responsive-padding-stuff-2 {
-    padding: 42px 78px;
+    padding: 54px 65px !important;
   }
 
   .responsive-padding-stuff-3 {
-    padding: 42px 78px;
+    padding: 94px 72px !important;
   }
 
   .responsive-cake-image-width {
@@ -437,12 +445,20 @@
     font-size: 28px;
   }
 
+  .responsive-frame-section {
+    font-size: 28px;
+  }
+
   .response-date-title {
-    font-size: 88px;
+    font-size: 88px !important;
   }
 
   .responsive-subsection {
-    font-size: 68px;
+    font-size: 68px !important;
+  }
+
+  .responsive-stuff-section-title {
+    font-size: 80px;
   }
 
   .responsive-text {
@@ -462,7 +478,7 @@
   }
 
   .responsive-padding-stuff-section {
-    padding: 116px 74px !important;
+    padding: 108px 74px !important;
   }
 
   .responsive-padding-schedule {

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Typography } from 'antd'
+import { Col, Row, Typography } from 'antd'
 
 const { Text } = Typography
 
@@ -13,7 +13,7 @@ interface TimeLeft {
 }
 
 const CountdownToDate = () => {
-  const targetDate = new Date('2026-09-02T15:00:00')
+  const targetDate = new Date('2026-05-02T15:00:00')
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({})
   const [expired, setExpired] = useState(false)
 
@@ -76,10 +76,16 @@ const CountdownToDate = () => {
   }
 
   return (
-    <div style={{ textAlign: 'center' }}>
-      {!expired && <Text className='tangerine-bold response-date-title' style={{ textAlign: 'center', color: '#869ed8' }}>Período para el Magnoevento</Text>}
-      {expired ? <Text className='tangerine-bold responsive-title' style={{ textAlign: 'center', lineHeight: 0.9, color: '#869ed8' }}>¡El evento ha comenzado!</Text> : renderTime()}
-    </div>
+    <Row align={'middle'} justify={'center'}>
+      <Col span={24} style={{ marginBottom: 160 }}>
+        <div style={{ textAlign: 'center' }}>
+          {!expired && <Text className='tangerine-bold response-date-title' style={{ textAlign: 'center', color: '#869ed8' }}>Período para el Magnoevento</Text>}
+          {expired ?
+            <Text className='tangerine-bold responsive-title' style={{ textAlign: 'center', lineHeight: 0.9, color: '#869ed8' }}>¡El evento ha comenzado!</Text> :
+            renderTime()}
+        </div>
+      </Col>
+    </Row>
   )
 }
 
