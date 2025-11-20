@@ -38,7 +38,7 @@ const BasicStuffSection = () => {
             }}>
             <Space direction='vertical' size={'middle'}>
               <Col span={24} style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
-                <Image className='responsive-shoes-image-width' src='src/assets/shoes.png' preview={false} />
+                <Image className='responsive-shoes-image-width' src='src/assets/formal.png' preview={false} />
               </Col>
               <Col span={24}>
                 <Typography

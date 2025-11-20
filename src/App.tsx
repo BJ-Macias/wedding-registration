@@ -25,33 +25,24 @@ function App() {
 
   return (
     <>
-      <Layout style={{
+
+      <Layout
+        style={{
+          padding: 0,
+          backgroundImage: 'url("src/assets/background.png")', // Ruta de la imagen
+          backgroundRepeat: 'repeat', // Hace que se repita
+          backgroundSize: 'auto', // Mantiene el tamaño original
+          backgroundPosition: 'top left', // Comienza desde la esquina superior izquierda
+          position: 'relative',
+          overflow: 'hidden'
+        }}>
+
+        {/* <Layout style={{
         padding: 0,
         backgroundColor: token.colorBgContainer,
         position: 'relative',
         overflow: 'hidden'
-      }}>
-        <Image className='resposive-xl-background-image' src='src/assets/stars.png' preview={false} style={{
-          position: 'absolute',
-          top: '-20px',
-          left: '-147px',
-          zIndex: 0,
-
-        }} />
-        <Image className='resposive-xl-background-image' src='src/assets/rings.png' preview={false} style={{
-          position: 'absolute',
-          top: '-80px',
-          right: '-100px',
-          zIndex: 0,
-          transform: 'rotate(-110deg)'
-        }} />
-        <Image src='src/assets/stars.png' preview={false} style={{
-          position: 'absolute',
-          top: '+90px',
-          right: '+200px',
-          zIndex: 0,
-          width: '70px',
-        }} />
+      }}> */}
         <Content style={{ position: 'relative', zIndex: 1 }}>
           <Row align={'middle'} justify={'center'} >
             <Col xs={23} sm={23} md={16} lg={16} xl={16} xxl={16}>
