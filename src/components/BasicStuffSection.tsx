@@ -3,7 +3,7 @@ import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint"
 
 import chalkFrame from '../assets/chalkFrame.png'
 import verticalFrame from '../assets/verticalFrame.png'
-import formalShoes from '../assets/letter.png'
+import formalShoes from '../assets/formal.png'
 import letter from '../assets/letter.png'
 import notes from '../assets/notes.png'
 

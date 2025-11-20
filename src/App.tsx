@@ -19,11 +19,13 @@ function App() {
 
       <Layout
         style={{
+          minHeight: '100dvh',
           padding: 0,
-          backgroundImage: `url(${background})`, // Ruta de la imagen
-          backgroundRepeat: 'repeat', // Hace que se repita
-          backgroundSize: 'auto', // Mantiene el tamaño original
-          backgroundPosition: 'top left', // Comienza desde la esquina superior izquierda
+          margin: 0,
+          backgroundImage: `url(${background})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: 'auto',
+          backgroundPosition: 'top left',
           position: 'relative',
           overflow: 'hidden'
         }}>
