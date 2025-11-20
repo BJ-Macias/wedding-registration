@@ -1,5 +1,11 @@
 import { useEffect, useRef } from 'react'
 
+declare global {
+  interface Window {
+    H: any;
+  }
+}
+
 const HereMap = () => {
   const mapRef = useRef<HTMLDivElement>(null)
 
@@ -25,7 +31,7 @@ const HereMap = () => {
 
     window.addEventListener("resize", () => map.getViewPort().resize())
 
-    const behavior = new window.H.mapevents.Behavior(
+    new window.H.mapevents.Behavior(
       new window.H.mapevents.MapEvents(map)
     )
 

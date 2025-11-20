@@ -1,5 +1,5 @@
 import { SendOutlined, UserAddOutlined } from '@ant-design/icons';
-import { AutoComplete, Button, Card, Col, Form, Row, Space, Typography, type AutoCompleteProps, type FormProps } from 'antd';
+import { AutoComplete, Button, Col, Form, Row, Typography, type AutoCompleteProps, type FormProps } from 'antd';
 import type { FieldNamesType } from 'antd/es/cascader';
 import { useState } from 'react';
 import GlassCard from './GlassCard';
@@ -11,7 +11,7 @@ type FieldType = {
 const RegisterForm = () => {
 
   const [value, setValue] = useState('')
-  const [options, setOptions] = useState<AutoCompleteProps['options']>([
+  const [options] = useState<AutoCompleteProps['options']>([
     { value: 'Celeste' },
     { value: 'Jairo' }
   ])

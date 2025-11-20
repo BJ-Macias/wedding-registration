@@ -1,28 +1,17 @@
 
-import { Col, Divider, Image, Layout, message, Row, Space, Tag, theme, Typography } from 'antd'
+import { Col, Layout, Row } from 'antd'
 import { Content } from 'antd/es/layout/layout'
-import CountdownToDate from './components/CountdownToDate'
-import GiftTable from './components/GiftTable'
-import GlassCard from './components/GlassCard'
-import HereMap from './components/HereMap'
-import ImageCarousel from './components/ImageCarousel'
-import RegisterForm from './components/RegisterForm'
-import useBreakpoint from 'antd/lib/grid/hooks/useBreakpoint';
-import HeaderInfo from './components/HeaderInfo'
-import CoupleInfo from './components/CoupleInfo'
-import ScheduleInfo from './components/ScheduleInfo'
 import BasicStuffSection from './components/BasicStuffSection'
+import CountdownToDate from './components/CountdownToDate'
+import CoupleInfo from './components/CoupleInfo'
+import GiftTable from './components/GiftTable'
+import HeaderInfo from './components/HeaderInfo'
+import ImageCarousel from './components/ImageCarousel'
 import LocationInfo from './components/LocationInfo'
-
-const { useToken } = theme
+import RegisterForm from './components/RegisterForm'
+import ScheduleInfo from './components/ScheduleInfo'
 
 function App() {
-  const screens = useBreakpoint()
-
-  const { token } = useToken()
-
-
-
   return (
     <>
 
