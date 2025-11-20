@@ -1,6 +1,11 @@
 import { Col, Divider, Image, Row, Tag, Typography } from "antd"
 import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint"
 
+import cake from '../assets/cake.png';
+import cups from '../assets/cups.png';
+import smallFrame from '../assets/smallFrame.png';
+
+
 const ScheduleInfo = () => {
   const screens = useBreakpoint()
   
@@ -18,21 +23,21 @@ const ScheduleInfo = () => {
             <Typography className='comic-relief-bold responsive-subtitle' style={{ color: '#869ed8' }}>02.Mayo.2026</Typography>
           </Col>
           <Col span={24} style={{ display: 'flex', justifyContent: 'center', margin: '10px 0' }}>
-            <Image className='responsive-cake-image-width' src='src/assets/cake.png' preview={false} />
+            <Image className='responsive-cake-image-width' src={cake} preview={false} />
           </Col>
         </Row>
       </Col>
       <Col span={12} xs={24} sm={23} md={22} lg={11} xxl={11}>
         <Row align={'top'} justify={'start'}>
           <Col span={24} style={{ display: 'flex', justifyContent: 'center', margin: '0 0 20px 0' }}>
-            <Image className='responsive-cups-image-width' src='src/assets/cups.png' preview={false} />
+            <Image className='responsive-cups-image-width' src={cups} preview={false} />
           </Col>
           <Col span={24}>
             <Row align={'middle'} justify={'start'}
               className='responsive-padding-schedule'
               style={{
                 position: 'relative',
-                backgroundImage: 'url(src/assets/smallFrame.png)',
+                backgroundImage: `url(${smallFrame})`,
                 backgroundSize: 'contain',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',

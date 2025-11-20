@@ -1,6 +1,11 @@
 import { Col, Image, Row, Space, Typography } from "antd"
 import useBreakpoint from "antd/lib/grid/hooks/useBreakpoint"
 
+import chalkFrame from '../assets/verticalFrame.png';
+import rings from '../assets/rings.png';
+import gittTable from '../assets/giftTable.png';
+import ringBox from '../assets/ringBox.png';
+
 const CoupleInfo = () => {
   const screens = useBreakpoint()
   
@@ -10,7 +15,7 @@ const CoupleInfo = () => {
         className={`responsive-padding-col ${screens.lg ? 'rotate-frame' : ''}`}
         style={{
           position: 'relative',
-          backgroundImage: 'url(src/assets/verticalFrame.png)',
+          backgroundImage: `url(${chalkFrame})`,
           backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -25,7 +30,7 @@ const CoupleInfo = () => {
             <Typography className='meow-script-regular response-date-title' style={{ color: '#869ed8' }}>Cel & Jairo</Typography>
           </Col>
           <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
-            <Image src='src/assets/rings.png' preview={false} style={{
+            <Image src={rings} preview={false} style={{
               width: '90px',
               transform: 'rotate(28deg)'
             }} />
@@ -43,7 +48,7 @@ const CoupleInfo = () => {
         <Row align={'middle'} justify={'center'} className={!screens.lg ? 'responsive-padding-schedule' : ''}>
           <Space direction='vertical' size={'large'}>
             <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
-              <Image src='src/assets/giftTable.png' preview={false} style={{
+              <Image src={gittTable} preview={false} style={{
                 width: '160px'
               }} />
             </Col>
@@ -64,7 +69,7 @@ const CoupleInfo = () => {
         <Row align={'middle'} justify={'center'} className={!screens.lg ? 'responsive-padding-schedule' : ''}>
           <Space direction='vertical' size={'large'}>
             <Col span={24} style={{ display: 'flex', justifyContent: 'center' }}>
-              <Image src='src/assets/ringBox.png' preview={false} style={{
+              <Image src={ringBox} preview={false} style={{
                 width: '140px'
               }} />
             </Col>

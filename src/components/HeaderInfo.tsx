@@ -1,6 +1,8 @@
 import { Col, Row, Typography } from "antd"
 import SplitText from "./SplitText"
 
+import chalkFrame from '../assets/chalkFrame.png';
+
 const HeaderInfo = () => {
   return (
     <Row align={'middle'} justify={'space-evenly'} style={{ marginBottom: 120 }}>
@@ -17,7 +19,7 @@ const HeaderInfo = () => {
         className='responsive-chalkframe-pading'
         style={{
           position: 'relative',
-          backgroundImage: 'url(src/assets/chalkFrame.png)',
+          backgroundImage: `url(${chalkFrame})`,
           backgroundSize: 'contain',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -58,14 +60,6 @@ const HeaderInfo = () => {
             />
           </Col>
         </Row>
-        {/* <Image src='src/assets/rings.png' preview={false} style={{
-                    position: 'absolute',
-                    top: '-30px',
-                    right: '+50px',
-                    zIndex: 0,
-                    width: '70px',
-                    transform: 'rotate(+60deg)'
-                  }} /> */}
       </Col>
       <Col span={2} xs={0} sm={2} md={3} lg={2} xl={2} xxl={2}>
         <Typography className='imperial-script-regular response-date-title' style={{ textAlign: 'center', lineHeight: 0.7 }}>02 05 26</Typography>

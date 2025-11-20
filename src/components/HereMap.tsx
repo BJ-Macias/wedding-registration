@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
 
+import quintaIcon from '../assets/quintaIcon.png';
+
 declare global {
   interface Window {
     H: any;
@@ -38,7 +40,7 @@ const HereMap = () => {
     window.H.ui.UI.createDefault(map, defaultLayers)
 
     // Crear un icono personalizado
-    const icon = new window.H.map.Icon('src/assets/quintaIcon.png', {
+    const icon = new window.H.map.Icon(quintaIcon, {
       size: { w: 48, h: 48 }
     })
 

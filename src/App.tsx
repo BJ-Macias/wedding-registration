@@ -11,6 +11,8 @@ import LocationInfo from './components/LocationInfo'
 import RegisterForm from './components/RegisterForm'
 import ScheduleInfo from './components/ScheduleInfo'
 
+import background from './assets/background.png'
+
 function App() {
   return (
     <>
@@ -18,7 +20,7 @@ function App() {
       <Layout
         style={{
           padding: 0,
-          backgroundImage: 'url("src/assets/background.png")', // Ruta de la imagen
+          backgroundImage: `url(${background})`, // Ruta de la imagen
           backgroundRepeat: 'repeat', // Hace que se repita
           backgroundSize: 'auto', // Mantiene el tamaño original
           backgroundPosition: 'top left', // Comienza desde la esquina superior izquierda
